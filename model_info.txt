@@ -1,0 +1,58 @@
+🚦 TRAFFIC SIGN RECOGNITION MODEL INFORMATION
+=============================================
+
+📊 DATASET INFORMATION:
+- Source: Kaggle - "ahemateja19bec1025/traffic-sign-dataset-classification"
+- Classes: 43 traffic sign categories (German Traffic Sign Recognition Benchmark)
+- Format: Images organized in numbered folders (0-42)
+- Preprocessing: Resize to 32x32, grayscale conversion, histogram equalization
+
+🏗️ MODEL ARCHITECTURE:
+- Input Shape: (32, 32, 1) - grayscale images
+- Architecture: Convolutional Neural Network (CNN)
+- Layers:
+  * Conv2D + BatchNormalization + MaxPooling + Dropout
+  * Multiple convolutional blocks for feature extraction
+  * Fully connected layers for classification
+  * Output: 43 classes with softmax activation
+
+📋 SETUP INSTRUCTIONS:
+
+Option 1 - Automated Setup:
+1. Run: python setup_project.py
+2. Choose option 1 for full setup
+3. Wait for dataset download and model training
+
+Option 2 - Manual Setup:
+1. Install requirements: pip install -r requirements.txt
+2. Download dataset: python download_dataset.py
+3. Train model: python train_model.py
+4. Run application: python app.py
+
+Option 3 - Quick Demo:
+1. Run: python setup_project.py
+2. Choose option 2 for demo mode
+3. Add your own model.h5 file later
+
+🎯 TRAFFIC SIGN CLASSES (0-42):
+- Speed Limits: 20, 30, 50, 60, 70, 80, 100, 120 km/h
+- Prohibitory: Stop, Yield, No Entry, No Passing
+- Warning: Dangerous Curves, Road Work, Pedestrians, Children
+- Mandatory: Turn Directions, Keep Right/Left, Roundabout
+- Informational: Priority Road, End of Restrictions
+
+🔧 TRAINING FEATURES:
+- Data augmentation (rotation, zoom, shift)
+- Early stopping and learning rate reduction
+- Model checkpointing (saves best model)
+- Batch normalization and dropout for regularization
+- Training visualization and metrics
+
+📈 EXPECTED PERFORMANCE:
+- Training Time: 15-30 minutes (depending on hardware)
+- Expected Accuracy: 95%+ on validation set
+- Model Size: ~2-5 MB
+- Inference Time: <100ms per image
+
+🚀 USAGE:
+After training, the model.h5 file will be automatically used by the web application for real-time traffic sign recognition with confidence scoring and unit conversion.
